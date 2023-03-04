@@ -1,0 +1,49 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+
+.bordureChargement{
+    width:100px;
+    height:100px;
+    border:15px solid black;
+    border-radius:50%;
+    animation-name:chargement;
+    animation-duration:0.8s;
+    animation-iteration-count:infinite;
+    animation-timing-function:linear;
+    position:relative;
+}
+
+.bordureChargement:before{
+    content:"";
+    position:absolute;
+    top:0;
+    left:-15px;
+    width:80%;
+    height:100%;
+    background-color:white;
+    /* border-left:25px solid red; */
+     transform:translate(0,-50%); 
+    /* border-radius:50%; */
+}
+
+
+
+@keyframes chargement{
+    0%{
+        transform:rotate(0deg);
+    }
+
+    100%{
+        transform:rotate(360deg)
+    }
+}
